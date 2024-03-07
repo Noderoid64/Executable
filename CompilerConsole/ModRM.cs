@@ -5,9 +5,25 @@ namespace CompilerConsole
     public static class ModRM
     {
         // Mod/Opt/RM
-        public static byte Code32(byte first, byte second, byte mode = 0b00000011)
+        public static byte Code(byte first, byte second, byte mode = 0b00000011)
         {
             return (byte) (first | (second << 5) | mode);
+        }
+        
+        public static byte GetReg16FromString(string token)
+        {
+            switch (token)
+            {
+                case "ax": return 0x00;
+                case "cx": return 0x01;
+                case "dx": return 0x02;
+                case "bx": return 0x03;
+                case "sp": return 0x04;
+                case "bp": return 0x05;
+                case "si": return 0x06;
+                case "di": return 0x07;
+                default: throw new InvalidOperationException();
+            }
         }
 
         public static byte GetReg32FromString(string token)

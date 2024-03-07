@@ -50,6 +50,7 @@
         <Compile Include="Compiler\States\MovState.cs" />
         <Compile Include="Compiler\States\Mov_rm32_r32_0_State.cs" />
         <Compile Include="Compiler\States\NoContextState.cs" />
+        <Compile Include="Helper.cs" />
         <Compile Include="ModRM.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>

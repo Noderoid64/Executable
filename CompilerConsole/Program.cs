@@ -13,6 +13,11 @@ namespace CompilerConsole
             var compiler = new CompilerV2.CompilerV2();
             var tokenizer = new Tokenizer();
 
+            // foreach (var VARIABLE in tokenizer.GetTokensAsEnumerable("C:\\Users\\Mykhailo_Kryhin\\Desktop\\test.asm"))
+            // {
+            //     Console.WriteLine(VARIABLE);
+            // }
+
             byte[] program = null;
             try
             {
